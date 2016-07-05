@@ -3,20 +3,20 @@
 
    .config(function($routeProvider) {
     $routeProvider
-      .when('/index', {
+      .when('/', {
         controller: '',
         controllerAs: 'main',
         templateUrl: 'app/index.html'
       })
-    .when('/battle', {
+    .when('/search', {
         controller: 'DataCtrl',
         controllerAs: 'd',
         templateUrl: 'app/battle.html'
       })
-    .when('/select', {
-        controller: 'SelectCtrl',
-        controllerAs: 'main',
-        templateUrl: 'app/select.html'
+    .when('/favorites', {
+        controller: 'FavCtrl',
+        controllerAs: 'f',
+        templateUrl: 'app/fav.html'
       })
      .when('/hiScores', {
         controller: 'ScoreCtrl',

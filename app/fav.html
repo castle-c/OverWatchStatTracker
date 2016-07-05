@@ -1,0 +1,13 @@
+
+<h1></h1>
+<div class="playerFavorites">
+<form>
+<tt>Player Favorites:</tt>
+<input type="submit" value="Favorites" ng-click="f.showFavorites()">
+             <div ng-repeat= "dat in f.datas" value="f.datas">
+             <tt><hr>{{f.datas | json}}</tt>
+             <input type="submit" value="delete" ng-click="f.deleteProfile()">
+             </div>
+             </form>
+             </div>
+

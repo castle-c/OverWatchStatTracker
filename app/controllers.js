@@ -12,6 +12,10 @@ angular.module('app')
     })
   }
 
+    d.reload = function() {
+    window.location.reload()
+    }
+
     d.postProfile = function() {
       $http.post('https://capstone-c5b9a.firebaseio.com/.json', {
         Data: d.data
@@ -19,20 +23,26 @@ angular.module('app')
       window.location.reload()
     })
   }
+})
 
-  d.deleteProfile = function() {
+.controller('FavCtrl', function($scope, DataFactory, $http) {
+  const f = this; //or this
+
+
+  f.deleteProfile = function() {
     $http.delete('https://capstone-c5b9a.firebaseio.com/.json', {
-        Data: d.datas
+        Data: f.datas.$id
      }).then(function() {
       window.location.reload()
     })
 
   }
 
-  d.showFavorites = function() {
+  f.showFavorites = function() {
   DataFactory.getFavorites().then(datas => {
-      d.datas = datas
-    console.log(d.datas)
+      f.datas = datas
+    console.log(f.datas)
 })
 }
+
 })
