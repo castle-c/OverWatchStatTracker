@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+  </div>
+    <img src="http://orig15.deviantart.net/54d8/f/2016/157/5/b/overwatch_icon_by_ninjagirlcox-da58mrk.jpg"></img>
+    <a class="btn btn-default navbar-btn" href="#/login" role="button">Sign in</a>
+    <a class="btn btn-default navbar-btn" href="#/register" role="button">Register</a>
+    <a class="btn btn-default navbar-btn" href="#/search" role="button">Search</a>
+    <a class="btn btn-default navbar-btn" href="#/hero" role="button">Hero Stats</a>
+     <a class="btn btn-default navbar-btn" href="#/favorites" role="button">
+     Total Stats</a>
+  </div>
+</nav>
+<div class="banner"> <img src= "overwatch.png" width = "1280" height ="100"></div>
+  <div class="container">
+  <div ng-app="app">
+  <div ng-view></div>
+  </div>
+  </div>
+
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <script src="/lib/firebase/firebase.js"></script>
+  <script src="/lib/angular/angular.min.js"></script>
+  <script src="/lib/angular-route/angular-route.min.js"></script>
+  <script src="/app/main.js"></script>
+  <script src="/app/config.js"></script>
+  <script src="/app/controllers.js"></script>
+  <script src="/app/factories.js"></script>
+  <script src="/auth/authConfig.js"></script>
+  <script src="/auth/authFactory.js"></script>
+  <script src="/auth/registerCtrl.js"></script>
+  <script src="/auth/loginCtrl.js"></script>
+  <script src="/auth/logoutCtrl.js"></script>
+  </body>
+</html>
