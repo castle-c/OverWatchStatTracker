@@ -1,5 +1,15 @@
-body { padding-top: 51px; }
+body {
+ padding-top: 51px;
+ font-size: 200%;
 
-.banner{
+}
+
+.banner {
   padding-bottom: 20px; }
 
+#bottom{
+   width: 100%;
+   height: 1000%;
+   background: black
+
+}

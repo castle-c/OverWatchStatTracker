@@ -17,7 +17,15 @@ angular.module('app')
 
   getFavorites() {
     return $http
-      .get('https://capstone-c5b9a.firebaseio.com/.json')
+      .get('https://capstone-c5b9a.firebaseio.com/favories.json')
+      .then(response => response.data)
+      console.log(response.data)
+      .then(res => d = res)
+    },
+
+    getHeroes() {
+    return $http
+      .get('https://capstone-c5b9a.firebaseio.com/heroes.json')
       .then(response => response.data)
       console.log(response.data)
       .then(res => d = res)

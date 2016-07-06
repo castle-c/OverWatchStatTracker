@@ -9,7 +9,7 @@
      auth.logout = function() {
       console.log("ferferf")
 firebase.auth().signOut().then(function() {
-  $location.path('/login')
+  $location.path('/')
 }, function(error) {
   // An error happened.
 })

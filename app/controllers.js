@@ -25,7 +25,15 @@ angular.module('app')
     }
 
     d.postProfile = function() {
-      $http.post('https://capstone-c5b9a.firebaseio.com/all.json', {
+      $http.post('https://capstone-c5b9a.firebaseio.com/favorites.json', {
+        Data: d.data
+     }).then(function() {
+      window.location.reload()
+    })
+  }
+
+   d.postHero = function() {
+      $http.post('https://capstone-c5b9a.firebaseio.com/heroes.json', {
         Data: d.data
      }).then(function() {
       window.location.reload()
@@ -38,27 +46,45 @@ angular.module('app')
 
 
   f.deleteProfile = function() {
-    $http.delete('https://capstone-c5b9a.firebaseio.com/all.json', {
+    $http.delete('https://capstone-c5b9a.firebaseio.com/favorites.json', {
         Data: f.datas.$id
      }).then(function() {
       window.location.reload()
     })
+   }
 
-  }
+       f.deleteHero = function() {
+    $http.delete('https://capstone-c5b9a.firebaseio.com/heroes.json', {
+        Data: f.datas.$id
+     }).then(function() {
+      window.location.reload()
+    })
+   }
+
+ f.showHeroes = function() {
+  DataFactory.getFavorites().then(datas => {
+      f.datas = datas
+      console.log(f.datas)
+
+        firebase.database().ref('Heroes').orderByChild('data / key').on('value', (snapshot) => {
+        var ob = snapshot.val();
+
+        for(var ke in ob) {
+          var oby = ob[ke]
+          console.log(oby)
+          f.oby = oby
+      }
+    })
+    })
+}
 
   f.showFavorites = function() {
   DataFactory.getFavorites().then(datas => {
       f.datas = datas
       console.log(f.datas)
-      // for (let dats in f.datas) {
-      //   var datz = f.datas[dats]
-      //   console.log(datz)
-      //   for (let k in datz) {
-      //    var dat = datz[k]
-      //    console.log(dat)
-      //   }
-      // }
-      firebase.database().ref('all').orderByChild('data / key').on('value', (snapshot) => {
+
+
+      firebase.database().ref('Favorites').orderByChild('data / key').on('value', (snapshot) => {
         var obj = snapshot.val();
 
         for(var key in obj) {

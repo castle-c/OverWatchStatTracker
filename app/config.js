@@ -19,8 +19,8 @@
         templateUrl: 'app/fav.html'
       })
      .when('/hero', {
-        controller: 'DataCtrl',
-        controllerAs: 'd',
+        controller: 'FavCtrl',
+        controllerAs: 'f',
         templateUrl: 'app/hero.html'
       })
      .otherwise('/')

@@ -1,1 +1,12 @@
 <h1></h1>
+
+<div class="heroFavorites">
+<form>
+<tt>Favorite players by hero:</tt>
+<input type="submit" value="Get Heroes" ng-click="f.showHeroes()">
+             <div ng-repeat= "o in f.oby" value="">
+             <tt><hr>{{o}}</tt>
+             <input type="submit" value="delete" ng-click="f.deleteProfile()">
+             </div>
+             </form>
+             </div>

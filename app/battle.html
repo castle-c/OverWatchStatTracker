@@ -8,14 +8,16 @@
            </tt></div>
             <div><tt>Battle Tag<input ng-model= "d.tag"> ex: Surefour-2559
             </tt></div>
+            <div><tt>Game Mode<input ng-model= "d.game"> ex: quick-play, competitive
+            </tt></div>
             <input type="submit" value="Show Stats">
             </form>
 
-            <input type="submit" value="Create Banner" ng-click="d.sig()">
             <input type="submit" value="Save!" ng-click="d.postProfile()">
             <input type="submit" value="Nope!" ng-click="d.reload()">
+            <input type="submit" value="Create Banner" ng-click="d.sig()">
             <div><img src="{{d.sigy}}"></div>
-           <div><tt>Data: <tt>{{d.data}}</tt></tt>
+           <div><tt>Stats: <tt>{{d.data}}</tt></tt>
            </div>
             <!-- <div><tt>Data: {{d.datas}}</tt></div> -->
             </div>
