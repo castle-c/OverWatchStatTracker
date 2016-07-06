@@ -1,12 +1,60 @@
 <h1></h1>
-
-<div class="heroFavorites">
+<div class="playerFavorites">
 <form>
-<tt>Favorite players by hero:</tt>
-<input type="submit" value="Get Heroes" ng-click="f.showHeroes()">
-             <div ng-repeat= "o in f.oby" value="">
-             <tt><hr>{{o}}</tt>
-             <input type="submit" value="delete" ng-click="f.deleteProfile()">
+<h3><tt>Favorite players by Hero:</tt></h3>
+<input type="submit" value="Favorite by Hero" ng-click="f.showHeroes()">
+             <div ng-repeat= "data in f.datx" value="">
+
+            <div><tt><h3>Battle Tag: Surefour-2559</h3></div></tt>
+                      <div><tt><h3>Hero: Tracer</h3></tt></tt>
+            <div><tt>MeleeFinalBlows: {{data.MeleeFinalBlows}}</tt></div>
+       <div><tt> CriticalHitAccuracy: {{data.CriticalHitAccuracy}}</tt></div>
+<div><tt> CriticalHits: {{data.CriticalHits}}</tt></div>
+<div><tt> DamageDone: {{data.DamageDone}}</tt></div>
+<div><tt> Deaths: {{data.Deaths}}</tt></div>
+<div><tt> Deaths-Average: {{data.Deaths-Average}}</tt></div>
+<div><tt> Eliminations: {{data.Eliminations}}</tt></div>
+<div><tt> Eliminations-Average: {{data.Eliminations-Average}}</tt></div>
+<div><tt> Eliminations-MostinGame: {{data.Eliminations-MostinGame}}</tt></div>
+<div><tt> Eliminations-MostinLife: {{data.Eliminations-MostinLife}}</tt></div>
+<div><tt> EliminationsperLife: {{data.EliminationsperLife}}</tt></div>
+<div><tt> EnvironmentalDeaths: {{data.EnvironmentalDeaths}}</tt></div>
+<div><tt> FinalBlows: {{data.FinalBlows}}</tt></div>
+<div><tt> FinalBlows-Average: {{data.FinalBlows-Average}}</tt></div>
+<div><tt> FinalBlows-MostinGame: {{data.FinalBlows-MostinGame}}</tt></div>
+<div><tt> GamesPlayed: {{data.GamesPlayed}}</tt></div>
+<div><tt> GamesWon: {{data.GamesWon}}</tt></div>
+<div><tt> Medals: {{data.Medals}}</tt></div>
+<div><tt> Medals-Bronze: {{data.Medals-Bronze}}</tt></div>
+<div><tt> Medals-Gold: {{data.Medals-Gold}}</tt></div>
+<div><tt> Medals-Silver: {{data.Medals-Silver}}</tt></div>
+<div><tt> MeleeFinalBlows: {{data.MeleeFinalBlows}}</tt></div>
+<div><tt> MeleeFinalBlows-MostinGame: {{data.MeleeFinalBlows-MostinGame}}</tt></div>
+<div><tt> Multikill-Best: {{data.Multikill-Best}}</tt></div>
+<div><tt> Multikills: {{data.Multikills}}</tt></div>
+<div><tt> ObjectiveKills: {{data.ObjectiveKills}}</tt></div>
+<div><tt> ObjectiveKills-Average: {{data.ObjectiveKills-Average}}</tt></div>
+<div><tt> ObjectiveKills-MostinGame: {{data.ObjectiveKills-MostinGame}}</tt></div>
+<div><tt> ObjectiveTime: {{data.ObjectiveTime}}</tt></div>
+<div><tt> ObjectiveTime-Average: {{data.ObjectiveTime-Average}}</tt></div>
+<div><tt> ObjectiveTime-MostinGame: {{data.ObjectiveTime-MostinGame}}</tt></div>
+<div><tt> PulseBombKills: {{data.PulseBombKills}}</tt></div>
+<div><tt> PulseBombKills-Average: {{data.PulseBombKills-Average}}</tt></div>
+<div><tt> PulseBombKills-MostinGame: {{data.PulseBombKills-MostinGame}}</tt></div>
+<div><tt> PulseBombsAttached: {{data.PulseBombsAttached}}</tt></div>
+<div><tt> PulseBombsAttached-Average: {{data.PulseBombsAttached-Average}}</tt></div>
+<div><tt> PulseBombsAttached-MostinGame: {{data.PulseBombsAttached-MostinGame}}</tt></div>
+<div><tt> SelfHealing: {{data.SelfHealing}}</tt></div>
+<div><tt> SelfHealing-MostinGame: {{data.SelfHealing-MostinGame}}</tt></div>
+<div><tt> SoloKills: {{data.SoloKills}}</tt></div>
+<div><tt> SoloKills-Average: {{data.SoloKills-Average}}</tt></div>
+<div><tt> SoloKills-MostinGame: {{data.SoloKills-MostinGame}}</tt></div>
+<div><tt> TimePlayed: {{data.TimePlayed}}</tt></div>
+<div><tt> TimeSpentonFire: {{data.TimeSpentonFire}}</tt></div>
+<div><tt> WeaponAccuracy: {{data.WeaponAccuracy}}</tt></div>
+<div><tt> WinPercentage: {{data.WinPercentage}}</tt></div>
+            </div>
+             <input type="submit" value="delete" ng-click="f.deleteHero()">
              </div>
              </form>
              </div>

@@ -7,9 +7,16 @@ angular.module('app')
 
   return {
 
-  getProfile(platform, region, tag) {
+  getProfile(platform, region, tag, mode) {
     return $http
-      .get('https://api.lootbox.eu/' + platform + '/' + region + '/' + tag + '/quick-play' + '/allHeroes/')
+      .get('https://api.lootbox.eu/' + platform + '/' + region + '/' + tag + '/' + mode + '/allHeroes/')
+      .then(response => response.data)
+      console.log(response.data)
+      .then(res => d = res)
+  },
+   getHero(platform, region, tag, mode, hero) {
+    return $http
+      .get('https://api.lootbox.eu/' + platform + '/' + region + '/' + tag + '/' + mode + '/hero/' + hero + '/')
       .then(response => response.data)
       console.log(response.data)
       .then(res => d = res)
@@ -17,7 +24,7 @@ angular.module('app')
 
   getFavorites() {
     return $http
-      .get('https://capstone-c5b9a.firebaseio.com/favories.json')
+      .get('https://capstone-c5b9a.firebaseio.com/favorites.json')
       .then(response => response.data)
       console.log(response.data)
       .then(res => d = res)

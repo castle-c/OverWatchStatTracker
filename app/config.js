@@ -23,5 +23,10 @@
         controllerAs: 'f',
         templateUrl: 'app/hero.html'
       })
+      .when('/herosearch', {
+        controller: 'DataCtrl',
+        controllerAs: 'd',
+        templateUrl: 'app/heroes.html'
+      })
      .otherwise('/')
    });

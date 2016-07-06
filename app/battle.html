@@ -1,14 +1,14 @@
 <h1></h1>
 
   <div class="playerProfile">
-        <tt>Player Profile:</tt>
+       <h3><tt>Player profile by Total:</tt></h3>
         <form ng-submit="d.showProfile()">
             <div><tt>Game platform<input ng-model= "d.platform"> ex: pc, xbox, ps</tt></div>
            <div><tt>Region <input ng-model= "d.region"> ex: us, eu
            </tt></div>
             <div><tt>Battle Tag<input ng-model= "d.tag"> ex: Surefour-2559
             </tt></div>
-            <div><tt>Game Mode<input ng-model= "d.game"> ex: quick-play, competitive
+            <div><tt>Game Mode<input ng-model= "d.mode"> ex: quick-play, competitive
             </tt></div>
             <input type="submit" value="Show Stats">
             </form>
@@ -17,10 +17,44 @@
             <input type="submit" value="Nope!" ng-click="d.reload()">
             <input type="submit" value="Create Banner" ng-click="d.sig()">
             <div><img src="{{d.sigy}}"></div>
-           <div><tt>Stats: <tt>{{d.data}}</tt></tt>
-           </div>
-            <!-- <div><tt>Data: {{d.datas}}</tt></div> -->
+            <p>
+            <form>
+            <div><h4>Use this link to save your banner!</h4> {{d.sigy}}</div>
+            </form>
+            </p>
+
+            <div><tt><h4>{{d.tag}}</h4></tt></div>
+            <div><tt>MeleeFinalBlows: {{d.data.MeleeFinalBlows}}</tt></div>
+<div><tt>SoloKills: {{d.data.SoloKills}}</tt></div>
+<div><tt>ObjectiveKills: {{d.data.ObjectiveKills}}</tt></div>
+<div><tt>FinalBlow: {{d.data.FinalBlow}}</tt></div>
+<div><tt>DamageDone: {{d.data.DamageDone}}</tt></div>
+<div><tt>Eliminations: {{d.data.Eliminations}}</tt></div>
+<div><tt>EnvironmentalKills: {{d.data.EnvironmentalKills}}</tt></div>
+<div><tt>Multikills: {{d.data.Multikills}}</tt></div>
+<div><tt>HealingDone: {{d.data.HealingDone}}</tt></div>
+<div><tt>ReconAssists: {{d.data.ReconAssists}}</tt></div>
+<div><tt>TeleporterPadsDestroyed: {{d.data.TeleporterPadsDestroyed}}</tt></div>
+<div><tt>Eliminations-MostinGame: {{d.data.Eliminations-MostinGame}}</tt></div>
+<div><tt>ObjectiveKills-MostinGame: {{d.data.ObjectiveKills-MostinGame}}</tt></div>
+<div><tt>ObjectiveTime-MostinGame: {{d.data.ObjectiveTime-MostinGame}}</tt></div>
+<div><tt>Multikill-Best: {{d.data.Multikill-Best}}</tt></div>
+<div><tt>MeleeFinalBlows-Average: {{d.data.MeleeFinalBlows-Average}}</tt></div>
+<div><tt>ObjectiveKills-Average: {{d.data.ObjectiveKills-Average}}</tt></div>
+<div><tt>Deaths: {{d.data.Deaths}}</tt></div>
+<div><tt>EnvironmentalDeaths: {{d.data.EnvironmentalDeaths}}</tt></div>
+<div><tt>Cards: {{d.data.Cards}}</tt></div>
+<div><tt>Medals: {{d.data.Medals}}</tt></div>
+<div><tt>Medals-Gold: {{d.data.Medals-Gold}}</tt></div>
+<div><tt>Medals-Silver: {{d.data.Medals-Silver}}</tt></div>
+<div><tt>Medals-Bronze: {{d.data.Medals-Bronze}}</tt></div>
+<div><tt>GamesWon: {{d.data.GamesWon}}</tt></div>
+<div><tt>GamesPlayed: {{d.data.GamesPlayed}}</tt></div>
+<div><tt>TimeSpentonFire: {{d.data.TimeSpentonFire}}</tt></div>
+<div><tt>ObjectiveTime: {{d.data.ObjectiveTime}}</tt></div>
+<div><tt>TimePlayed: {{d.data.TimePlayed}}</tt></div>
+<div><tt>MeleeFinalBlows-MostinGame: {{d.data.MeleeFinalBlows-MostinGame}}</tt></div>
             </div>
-           <!--  </tr> -->
+                       <!--  </tr> -->
 
 

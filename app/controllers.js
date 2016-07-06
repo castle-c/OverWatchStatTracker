@@ -7,7 +7,15 @@ angular.module('app')
 
 
   d.showProfile = function() {
-  DataFactory.getProfile(d.platform, d.region, d.tag).then(data => {
+  DataFactory.getProfile(d.platform, d.region, d.tag, d.mode).then(data => {
+      d.data = data
+    console.log(d.data)
+
+     })
+  }
+
+  d.showHero = function() {
+  DataFactory.getHero(d.platform, d.region, d.tag, d.mode, d.hero).then(data => {
       d.data = data
     console.log(d.data)
 
@@ -55,44 +63,50 @@ angular.module('app')
 
        f.deleteHero = function() {
     $http.delete('https://capstone-c5b9a.firebaseio.com/heroes.json', {
-        Data: f.datas.$id
+        Data: f.dat.$id
      }).then(function() {
       window.location.reload()
     })
    }
 
  f.showHeroes = function() {
-  DataFactory.getFavorites().then(datas => {
-      f.datas = datas
-      console.log(f.datas)
-
-        firebase.database().ref('Heroes').orderByChild('data / key').on('value', (snapshot) => {
-        var ob = snapshot.val();
-
-        for(var ke in ob) {
-          var oby = ob[ke]
-          console.log(oby)
-          f.oby = oby
+  DataFactory.getHeroes().then(dat => {
+      f.dat= dat
+      for (let dato in f.dat) {
+        var datx = f.dat[dato]
+        console.log(datx)
+        f.datx = datx
       }
-    })
+    //     firebase.database().ref('Heroes').orderByChild('data / key').on('value', (snapshot) => {
+    //     var ob = snapshot.val();
+
+    //     for(var ke in ob) {
+    //       var oby = ob[ke]
+    //       console.log(oby)
+    //       f.oby = oby
+    //   }
+    // })
     })
 }
 
   f.showFavorites = function() {
   DataFactory.getFavorites().then(datas => {
       f.datas = datas
-      console.log(f.datas)
 
-
-      firebase.database().ref('Favorites').orderByChild('data / key').on('value', (snapshot) => {
-        var obj = snapshot.val();
-
-        for(var key in obj) {
-          var objy = obj[key]
-          console.log(objy)
-          f.objy = objy
+   for (let dati in f.datas) {
+        var datz = f.datas[dati]
+        console.log(datz)
+        f.datz = datz
       }
-    })
+      // firebase.database().ref('Favorites').orderByChild('data / key').on('value', (snapshot) => {
+      //   var obj = snapshot.val();
+
+      //   for(var key in obj) {
+      //     var objy = obj[key]
+      //     console.log(objy)
+      //     f.objy = objy
+    //   }
+    // })
     })
 }
 })

@@ -1,10 +1,42 @@
 <h1></h1>
 <div class="playerFavorites">
 <form>
-<tt>Favorite players by total score:</tt>
-<input type="submit" value="Get Totals" ng-click="f.showFavorites()">
-             <div ng-repeat= "o in f.objy" value="">
-             <tt><hr>{{o}}</tt>
+<h3><tt>Favorite players by Total Score:</tt></h3>
+<input type="submit" value="Favorite by Total" ng-click="f.showFavorites()">
+             <div ng-repeat= "data in f.datz" value="">
+
+                      <div><tt><h3>Battle Tag: Surefour-2559</h3></tt></tt>
+            <div><tt>MeleeFinalBlows: {{data.MeleeFinalBlows}}</tt></div>
+<div><tt>SoloKills: {{data.SoloKills}}</tt></div>
+<div><tt>ObjectiveKills: {{data.ObjectiveKills}}</tt></div>
+<div><tt>FinalBlow: {{data.FinalBlow}}</tt></div>
+<div><tt>DamageDone: {{data.DamageDone}}</tt></div>
+<div><tt>Eliminations: {{data.Eliminations}}</tt></div>
+<div><tt>EnvironmentalKills: {{data.EnvironmentalKills}}</tt></div>
+<div><tt>Multikills: {{data.Multikills}}</tt></div>
+<div><tt>HealingDone: {{data.HealingDone}}</tt></div>
+<div><tt>ReconAssists: {{data.ReconAssists}}</tt></div>
+<div><tt>TeleporterPadsDestroyed: {{data.TeleporterPadsDestroyed}}</tt></div>
+<div><tt>Eliminations-MostinGame: {{data.Eliminations-MostinGame}}</tt></div>
+<div><tt>ObjectiveKills-MostinGame: {{data.ObjectiveKills-MostinGame}}</tt></div>
+<div><tt>ObjectiveTime-MostinGame: {{data.ObjectiveTime-MostinGame}}</tt></div>
+<div><tt>Multikill-Best: {{data.Multikill-Best}}</tt></div>
+<div><tt>MeleeFinalBlows-Average: {{data.MeleeFinalBlows-Average}}</tt></div>
+<div><tt>ObjectiveKills-Average: {{data.ObjectiveKills-Average}}</tt></div>
+<div><tt>Deaths: {{data.Deaths}}</tt></div>
+<div><tt>EnvironmentalDeaths: {{data.EnvironmentalDeaths}}</tt></div>
+<div><tt>Cards: {{data.Cards}}</tt></div>
+<div><tt>Medals: {{data.Medals}}</tt></div>
+<div><tt>Medals-Gold: {{data.Medals-Gold}}</tt></div>
+<div><tt>Medals-Silver: {{data.Medals-Silver}}</tt></div>
+<div><tt>Medals-Bronze: {{data.Medals-Bronze}}</tt></div>
+<div><tt>GamesWon: {{data.GamesWon}}</tt></div>
+<div><tt>GamesPlayed: {{data.GamesPlayed}}</tt></div>
+<div><tt>TimeSpentonFire: {{data.TimeSpentonFire}}</tt></div>
+<div><tt>ObjectiveTime: {{data.ObjectiveTime}}</tt></div>
+<div><tt>TimePlayed: {{data.TimePlayed}}</tt></div>
+<div><tt>MeleeFinalBlows-MostinGame: {{d.data.MeleeFinalBlows-MostinGame}}</tt></div>
+            </div>
              <input type="submit" value="delete" ng-click="f.deleteProfile()">
              </div>
              </form>
