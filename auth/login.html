@@ -1,7 +1,7 @@
 <h1>Login</h1>
-<form ng-submit="auth.login()">
+<form ng-submit="auth.login(); auth.getUser; auth.getUserAuth">
   <input type="email" ng-model="auth.user.email" placeholder="email" />
   <input type="password" ng-model="auth.user.password" placeholder="password" />
-  <input type="submit" value="Login" class="btn btn-primary" />
-  <a href="#/register" type="submit" class="btn btn-primary">Register</a>
+  <input type="submit" value="Login" class="login" />
+  <input type="submit" value="Logout" ng-click="auth.logout()" />
 </form>

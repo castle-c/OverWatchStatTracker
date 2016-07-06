@@ -18,10 +18,10 @@
         controllerAs: 'f',
         templateUrl: 'app/fav.html'
       })
-     .when('/hiScores', {
-        controller: 'ScoreCtrl',
-        controllerAs: 'main',
-        templateUrl: 'app/hiscores.html'
+     .when('/hero', {
+        controller: 'DataCtrl',
+        controllerAs: 'd',
+        templateUrl: 'app/hero.html'
       })
      .otherwise('/')
    });

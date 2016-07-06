@@ -14,9 +14,5 @@
         controllerAs: 'auth',
         templateUrl: '/auth/register.html'
       })
-      .when('/logout', {
-        controller: 'LogoutCtrl',
-        controllerAs: 'auth',
-        template: ''
-      })
-    })
+   })
+

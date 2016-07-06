@@ -8,5 +8,6 @@
     auth.register = function () {
       console.log("auth", auth.register);
       AuthFactory.userCreate(auth.user.email, auth.user.password)
+      $location.path('/login')
     }
   });

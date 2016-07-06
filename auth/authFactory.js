@@ -3,7 +3,14 @@ angular.module('app')
 
 .factory('AuthFactory', (function($http) {
 
+const users = {
+
+    };
+
+    const currentUser = null;
+
   return {
+
 
 userCreate(email, password) {
       firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
@@ -21,17 +28,15 @@ userCreate(email, password) {
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log(errorMessage );
+
+
         // ...
       }); //sign in
-    },
-
-    userLogout() {
-      firebase.auth().signOut().then(function() {
-        // Sign-out successful.
-      }, function(error) {
-        // An error happened. //logout
-      });
     }
+
+
+
+
   }
 }))
 
