@@ -7,12 +7,12 @@
     .when('/login', {
         controller: 'LoginCtrl',
         controllerAs: 'auth',
-        templateUrl: '/auth/login.html'
+        templateUrl: 'auth/login.html'
       })
      .when('/register', {
         controller: 'RegisterCtrl',
         controllerAs: 'auth',
-        templateUrl: '/auth/register.html'
+        templateUrl: 'auth/register.html'
       })
    })
 

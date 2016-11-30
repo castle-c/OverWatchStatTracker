@@ -8,7 +8,7 @@
         controllerAs: 'main',
         templateUrl: 'app/index.html'
       })
-    .when('/search', {
+    .when('/', {
         controller: 'DataCtrl',
         controllerAs: 'd',
         templateUrl: 'app/battle.html'
