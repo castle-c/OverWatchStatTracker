@@ -3,15 +3,28 @@
   <div class="heroProfile">
         <h3><tt>Player profile by Hero:</tt></h3>
         <form ng-submit="d.showHero()">
-            <div><tt>Game platform<input ng-model= "d.platform"> ex: pc, xbox, ps</tt></div>
-           <div><tt>Region <input ng-model= "d.region"> ex: us, eu
-           </tt></div>
-            <div><tt>Battle Tag<input ng-model= "d.tag"> ex: Surefour-2559
-            </tt></div>
-            <div><tt>Game Mode<input ng-model= "d.mode"> ex: quick-play, competitive
-            </tt></div>
-            <div><tt>Hero Select<input ng-model= "d.hero"> ex: Tracer, Reaper
-            </tt></div>
+          <div><tt>Game platform: PC <tt><input type="radio" name="platform" value="pc" ng-model= "d.platform"></tt>
+            <tt> Xbox <input type="radio" name="platform" value="xbox" ng-model= "d.platform"></tt>
+            <tt> Playstation <input type="radio" name="platform" value="ps" ng-model= "d.platform"></tt></div><br>
+
+
+           <div><tt>Region: US <input type="radio" name="region" value="us" ng-model= "d.region">
+           </tt>
+           <tt>EU <input type="radio" name="region" value="eu" ng-model= "d.region">
+           </tt>
+           <tt>Global <input type="radio" name="region" value="global" ng-model= "d.region">
+           </tt></div><br>
+
+
+            <div><tt>Game Mode: Quickplay <tt><input type="radio" name="Mode" value="quickplay" ng-model= "d.mode"></tt>
+            <tt> Competitive <input type="radio" name="Mode" value="competitive" ng-model= "d.mode"></tt></div><br>
+
+            <div><tt>Hero Select: <input ng-model= "d.hero"> example: Tracer, Reaper, Genji, etc..
+            </tt></div><br>
+
+             <div><tt>Battle Tag: <input ng-model="d.tag"> example: Surefour-2559
+            </tt></div><br>
+
             <input type="submit" value="Show Stats">
             </form>
 
@@ -21,54 +34,49 @@
 
             <div><h4>{{d.tag}}</h4></div>
             <div><h4>{{d.hero}}</h4></div>
-       <div><tt> CriticalHitAccuracy: {{d.data.CriticalHitAccuracy}}</tt></div>
-<div><tt> CriticalHits: {{d.data.CriticalHits}}</tt></div>
-<div><tt> CriticalHits-MostinGame: {{d.data.CriticalHits-MostinGame}}</tt></div>
-<div><tt> CriticalHits-MostinLife: {{d.data.CriticalHits-MostinLife}}</tt></div>
-<div><tt> DamageDone: {{d.data.DamageDone}}</tt></div>
-<div><tt> DamageDone-Average: {{d.data.DamageDone-Average}}</tt></div>
-<div><tt> DamageDone-MostinGame: {{d.data.DamageDone-MostinGame}}</tt></div>
-<div><tt> DamageDone-MostinLife: {{d.data.DamageDone-MostinLife}}</tt></div>
-<div><tt> Deaths: {{d.data.Deaths}}</tt></div>
-<div><tt> Deaths-Average: {{d.data.Deaths-Average}}</tt></div>
-<div><tt> Eliminations: {{d.data.Eliminations}}</tt></div>
-<div><tt> Eliminations-Average: {{d.data.Eliminations-Average}}</tt></div>
-<div><tt> Eliminations-MostinGame: {{d.data.Eliminations-MostinGame}}</tt></div>
-<div><tt> Eliminations-MostinLife: {{d.data.Eliminations-MostinLife}}</tt></div>
-<div><tt> EliminationsperLife: {{d.data.EliminationsperLife}}</tt></div>
-<div><tt> EnvironmentalDeaths: {{d.data.EnvironmentalDeaths}}</tt></div>
-<div><tt> FinalBlows: {{d.data.FinalBlows}}</tt></div>
-<div><tt> FinalBlows-Average: {{d.data.FinalBlows-Average}}</tt></div>
-<div><tt> FinalBlows-MostinGame: {{d.data.FinalBlows-MostinGame}}</tt></div>
-<div><tt> GamesPlayed: {{d.data.GamesPlayed}}</tt></div>
-<div><tt> GamesWon: {{d.data.GamesWon}}</tt></div>
-<div><tt> Medals: {{d.data.Medals}}</tt></div>
-<div><tt> Medals-Bronze: {{d.data.Medals-Bronze}}</tt></div>
-<div><tt> Medals-Gold: {{d.data.Medals-Gold}}</tt></div>
-<div><tt> Medals-Silver: {{d.data.Medals-Silver}}</tt></div>
-<div><tt> MeleeFinalBlows: {{d.data.MeleeFinalBlows}}</tt></div>
-<div><tt> MeleeFinalBlows-MostinGame: {{d.data.MeleeFinalBlows-MostinGame}}</tt></div>
-<div><tt> Multikill-Best: {{d.data.Multikill-Best}}</tt></div>
-<div><tt> Multikills: {{d.data.Multikills}}</tt></div>
-<div><tt> ObjectiveKills: {{d.data.ObjectiveKills}}</tt></div>
-<div><tt> ObjectiveKills-Average: {{d.data.ObjectiveKills-Average}}</tt></div>
-<div><tt> ObjectiveKills-MostinGame: {{d.data.ObjectiveKills-MostinGame}}</tt></div>
-<div><tt> ObjectiveTime: {{d.data.ObjectiveTime}}</tt></div>
-<div><tt> ObjectiveTime-Average: {{d.data.ObjectiveTime-Average}}</tt></div>
-<div><tt> ObjectiveTime-MostinGame: {{d.data.ObjectiveTime-MostinGame}}</tt></div>
-<div><tt> PulseBombKills: {{d.data.PulseBombKills}}</tt></div>
-<div><tt> PulseBombKills-Average: {{d.data.PulseBombKills-Average}}</tt></div>
-<div><tt> PulseBombKills-MostinGame: {{d.data.PulseBombKills-MostinGame}}</tt></div>
-<div><tt> PulseBombsAttached: {{d.data.PulseBombsAttached}}</tt></div>
-<div><tt> PulseBombsAttached-Average: {{d.data.PulseBombsAttached-Average}}</tt></div>
-<div><tt> PulseBombsAttached-MostinGame: {{d.data.PulseBombsAttached-MostinGame}}</tt></div>
-<div><tt> SelfHealing: {{d.data.SelfHealing}}</tt></div>
-<div><tt> SelfHealing-MostinGame: {{d.data.SelfHealing-MostinGame}}</tt></div>
-<div><tt> SoloKills: {{d.data.SoloKills}}</tt></div>
-<div><tt> SoloKills-Average: {{d.data.SoloKills-Average}}</tt></div>
-<div><tt> SoloKills-MostinGame: {{d.data.SoloKills-MostinGame}}</tt></div>
-<div><tt> TimePlayed: {{d.data.TimePlayed}}</tt></div>
-<div><tt> TimeSpentonFire: {{d.data.TimeSpentonFire}}</tt></div>
-<div><tt> WeaponAccuracy: {{d.data.WeaponAccuracy}}</tt></div>
-<div><tt> WinPercentage: {{d.data.WinPercentage}}</tt></div>
+       <div><tt> CriticalHitAccuracy: {{d.dats.CriticalHitAccuracy}}</tt></div>
+<div><tt> CriticalHits: {{d.dats.CriticalHits}}</tt></div>
+<div><tt> DamageDone: {{d.dats.DamageDone}}</tt></div>
+<div><tt> Deaths: {{d.dats.Deaths}}</tt></div>
+<div><tt> Deaths-Average: {{d.dats.Deaths-Average}}</tt></div>
+<div><tt> Eliminations: {{d.dats.Eliminations}}</tt></div>
+<div><tt> Eliminations-Average: {{d.dats.Eliminations-Average}}</tt></div>
+<div><tt> Eliminations-MostinGame: {{d.dats.Eliminations-MostinGame}}</tt></div>
+<div><tt> Eliminations-MostinLife: {{d.dats.Eliminations-MostinLife}}</tt></div>
+<div><tt> EliminationsperLife: {{d.dats.EliminationsperLife}}</tt></div>
+<div><tt> EnvironmentalDeaths: {{d.dats.EnvironmentalDeaths}}</tt></div>
+<div><tt> FinalBlows: {{d.dats.FinalBlows}}</tt></div>
+<div><tt> FinalBlows-Average: {{d.dats.FinalBlows-Average}}</tt></div>
+<div><tt> FinalBlows-MostinGame: {{d.dats.FinalBlows-MostinGame}}</tt></div>
+<div><tt> GamesPlayed: {{d.dats.GamesPlayed}}</tt></div>
+<div><tt> GamesWon: {{d.dats.GamesWon}}</tt></div>
+<div><tt> Medals: {{d.dats.Medals}}</tt></div>
+<div><tt> Medals-Bronze: {{d.dats.Medals-Bronze}}</tt></div>
+<div><tt> Medals-Gold: {{d.dats.Medals-Gold}}</tt></div>
+<div><tt> Medals-Silver: {{d.dats.Medals-Silver}}</tt></div>
+<div><tt> MeleeFinalBlows: {{d.dats.MeleeFinalBlows}}</tt></div>
+<div><tt> MeleeFinalBlows-MostinGame: {{d.dats.MeleeFinalBlows-MostinGame}}</tt></div>
+<div><tt> Multikill-Best: {{d.dats.Multikill-Best}}</tt></div>
+<div><tt> Multikills: {{d.dats.Multikills}}</tt></div>
+<div><tt> ObjectiveKills: {{d.dats.ObjectiveKills}}</tt></div>
+<div><tt> ObjectiveKills-Average: {{d.dats.ObjectiveKills-Average}}</tt></div>
+<div><tt> ObjectiveKills-MostinGame: {{d.dats.ObjectiveKills-MostinGame}}</tt></div>
+<div><tt> ObjectiveTime: {{d.dats.ObjectiveTime}}</tt></div>
+<div><tt> ObjectiveTime-Average: {{d.dats.ObjectiveTime-Average}}</tt></div>
+<div><tt> ObjectiveTime-MostinGame: {{d.dats.ObjectiveTime-MostinGame}}</tt></div>
+<div><tt> PulseBombKills: {{d.dats.PulseBombKills}}</tt></div>
+<div><tt> PulseBombKills-Average: {{d.dats.PulseBombKills-Average}}</tt></div>
+<div><tt> PulseBombKills-MostinGame: {{d.dats.PulseBombKills-MostinGame}}</tt></div>
+<div><tt> PulseBombsAttached: {{d.dats.PulseBombsAttached}}</tt></div>
+<div><tt> PulseBombsAttached-Average: {{d.dats.PulseBombsAttached-Average}}</tt></div>
+<div><tt> PulseBombsAttached-MostinGame: {{d.dats.PulseBombsAttached-MostinGame}}</tt></div>
+<div><tt> SelfHealing: {{d.dats.SelfHealing}}</tt></div>
+<div><tt> SelfHealing-MostinGame: {{d.dats.SelfHealing-MostinGame}}</tt></div>
+<div><tt> SoloKills: {{d.dats.SoloKills}}</tt></div>
+<div><tt> SoloKills-Average: {{d.dats.SoloKills-Average}}</tt></div>
+<div><tt> SoloKills-MostinGame: {{d.dats.SoloKills-MostinGame}}</tt></div>
+<div><tt> TimePlayed: {{d.dats.TimePlayed}}</tt></div>
+<div><tt> TimeSpentonFire: {{d.dats.TimeSpentonFire}}</tt></div>
+<div><tt> WeaponAccuracy: {{d.dats.WeaponAccuracy}}</tt></div>
+<div><tt> WinPercentage: {{d.dats.WinPercentage}}</tt></div>
             </div>

@@ -3,23 +3,36 @@
   <div class="playerProfile">
        <h3><tt>Player profile by Total:</tt></h3>
         <form ng-submit="d.showProfile()">
-            <div><tt>Game platform<input ng-model= "d.platform"> ex: pc, xbox, ps</tt></div>
-           <div><tt>Region <input ng-model= "d.region"> ex: us, eu
-           </tt></div>
-            <div><tt>Battle Tag<input ng-model= "d.tag"> ex: Surefour-2559
-            </tt></div>
-            <div><tt>Game Mode<input ng-model= "d.mode"> ex: quick-play, competitive
-            </tt></div>
+            <div><tt>Game platform: PC <tt><input type="radio" name="platform" value="pc" ng-model= "d.platform"></tt>
+            <tt> Xbox <input type="radio" name="platform" value="xbox" ng-model= "d.platform"></tt>
+            <tt> Playstation <input type="radio" name="platform" value="ps" ng-model= "d.platform"></tt></div><br>
+
+
+           <div><tt>Region: US <input type="radio" name="region" value="us" ng-model= "d.region">
+           </tt>
+           <tt>EU <input type="radio" name="region" value="eu" ng-model= "d.region">
+           </tt>
+           <tt>Global <input type="radio" name="region" value="global" ng-model= "d.region">
+           </tt></div><br>
+
+
+            <div><tt>Game Mode: Quickplay <tt><input type="radio" name="Mode" value="quickplay" ng-model= "d.mode"></tt>
+            <tt> Competitive <input type="radio" name="Mode" value="competitive" ng-model= "d.mode"></tt></div><br>
+
+             <div><tt>Battle Tag: <input ng-model="d.tag"> example: Surefour-2559
+            </tt></div><br>
+
+
             <input type="submit" value="Show Stats">
             </form>
 
             <input type="submit" value="Save!" ng-click="d.postProfile()">
             <input type="submit" value="Nope!" ng-click="d.reload()">
-            <input type="submit" value="Create Banner" ng-click="d.sig()">
+            <!-- <input type="submit" value="Create Banner" ng-click="d.sig()"> -->
             <div><img src="{{d.sigy}}"></div>
             <p>
             <form>
-            <div><h4>Use this link to save your banner!</h4> {{d.sigy}}</div>
+            <div></div>
             </form>
             </p>
 

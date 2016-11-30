@@ -17,7 +17,11 @@ angular.module('app')
   d.showHero = function() {
   DataFactory.getHero(d.platform, d.region, d.tag, d.mode, d.hero).then(data => {
       d.data = data
-    console.log(d.data)
+      for (let dato in d.data) {
+        var dats = d.data[dato]
+        console.log(dats)
+        d.dats = dats
+      }
 
      })
   }
